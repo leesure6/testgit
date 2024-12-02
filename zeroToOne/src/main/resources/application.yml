@@ -1,0 +1,23 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: sureZeroToOne
+  datasource:
+    url: jdbc:mysql://121.43.61.196:3306/yuapi
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: sure123456
+#  解决配置高版本springboot配置knife4j报错的解决方式
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+mybatis-plus:
+  global-config:
+    db-config:
+      logic-delete-field: deleted # 全局逻辑删除字段名
+      logic-delete-value: 1 # 逻辑已删除值
+      logic-not-delete-value: 0 # 逻辑未删除值
+
